@@ -213,6 +213,140 @@ main .projectcontainer .projectsBx{
     position: relative;
     font-size: 1.2rem;
     padding-left: 1rem;
-    /* top:50%;
-    transform: translateY(-50%); */
+}
+
+/* article */
+
+.textBg{
+    width: 100%;
+    padding: 2rem 0;
+    background-color: var(--bghead);
+
+}
+.textBg > div{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text{
+    width: 70%;
+    padding: 3.5rem 0;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--p);
+
+}
+.text::after{
+    content: url(./img/quote2.png);
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.text::before{
+    content: url(./img/quote1.png);
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.article{
+    padding: 5rem 0;
+
+}
+.containerBg{
+    padding: 4rem 0;
+}
+.containerBg .container{
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.containerBg .container .img{
+    padding-right: 1.5rem;
+    height: 100%;
+}
+.artdes{
+    padding: 0 1rem;
+}
+.artdes .head .timeline{
+    display: flex;
+    align-items: center;
+}
+.artdes .head .timeline p{
+    margin-right: 1rem;
+    color: var(--virtual);
+}
+.artdes .middle{
+    color: var(--p);
+    padding: 0.5rem 0;
+
+}
+.artdes .foot{
+    border: 2px solid #222222;
+    border-radius: 0.5rem;
+    display: inline-block;
+    padding: 0.3rem 2rem;
+    color: #222222;
+}
+
+/* footer */
+footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.ftopBg{
+    width: 100%;
+    padding: 5rem 0;
+    background-color: black;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+}
+.ftop{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+/* .shop{
+    flex: 1;
+    
+}
+.tweets{
+    flex:1;
+} */
+
+.fhead{
+    color: white;
+    padding: 1.5rem 0;
+}
+ .itemcontainer{
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    align-items:center;
+    
+}
+
+.itemcontainer .imgdes {
+    padding-left: 1rem;
+    align-self: stretch;
+}
+.itemcontainer .imgdes  p{
+    color: white;
+    align-self: flex-start;
+    padding: 1.8rem 0;
+}
+.itemcontainer .imgdes  a{
+    /* margin-top: 5rem; */
+    color: white;
+    border: 2px solid white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.4rem;
+    align-self: flex-end;
 }
