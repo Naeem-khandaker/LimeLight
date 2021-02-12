@@ -310,16 +310,24 @@ footer{
 }
 .ftop{
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
 }
-/* .shop{
-    flex: 1;
+.shop{
+    width: 50%;
     
 }
+.tweetsbg{
+    width: 50%;
+    padding-left: 2rem;
+}
 .tweets{
-    flex:1;
-} */
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 1.2rem 0;
+
+}
 
 .fhead{
     color: white;
@@ -330,6 +338,7 @@ footer{
     /* flex-wrap: wrap; */
     justify-content: space-between;
     align-items:center;
+    /* padding: 2rem 0; */
     
 }
 
@@ -340,13 +349,35 @@ footer{
 .itemcontainer .imgdes  p{
     color: white;
     align-self: flex-start;
-    padding: 1.8rem 0;
+    padding-bottom: 2rem;
 }
 .itemcontainer .imgdes  a{
-    /* margin-top: 5rem; */
+    margin-top: 2.5rem;
     color: white;
     border: 2px solid white;
     padding: 0.5rem 1rem;
     border-radius: 0.4rem;
     align-self: flex-end;
+}
+.tdes p{
+    color: white;
+    padding-left: 1.5rem;
+}
+ .icon{
+    align-self: flex-start;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+}
+.footer ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer ul li{
+    padding: 0 1.5rem;
 }
