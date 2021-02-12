@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bghead:#F7F7F7;
+    --virtual:#86C840;
+    --p:#AAAAAA;
+    --h:#222222;
+    --quote:#6A6A6A;
+    
+}
+li,a{
+    list-style: none;
+    text-decoration: none;
+    color: #222222;
+}
+
+@font-face{
+    font-family:Nexa Slab Regular;
+    src:url(./fonts/NexaSlab-Regular400.otf);
+}
+
+body{
+    font-family: "Nexa Slab Regular",sans-serif,monospace;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    /* width: 100vw; */
+}
+
+.container{
+    width: 80%;
+}
+
+/* header */
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* brand */
+.brand{
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.brand a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+.brand a p{
+    font-weight: bold;
+}
+.brand a p span{
+    color:var(--virtual)
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav ul li{
+    position: relative;
+}
+nav ul li .home{
+padding-bottom: 5px;
+}
+nav ul li .active::after{
+    content:" ";
+    border: 4px solid var(--virtual);
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    margin-top: 3px;
+}
+
+/* banner */
+.banner_bg{
+    width: 100%;
+    background-color: var(--bghead);
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.banner p{
+    color: var(--p);
+    padding: 20px 0;
+}
+.banner #email{
+    width:15rem;
+    height: 4.5vh;
+    outline: none;
+    border: 2px solid var(--p);
+    border-radius: 2px;
+}
+.banner #email::placeholder{
+    font-family: Nexa Slab Regular;
+    color: var(--p);
+    padding-left: 0.5rem;
+}
+.banner .btn{
+    margin-left: 15px;
+    padding: 1.2vh 25px;
+    background-color: var(--virtual);
+    color: white;
+    border-radius: 3px;
+}
+
+/* main */
+main{
+    width: 100%;
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+ .heading{
+    padding: 1rem 0;
+    padding-left: 0.9rem;
+    border-left: 9px solid var(--virtual);
+    margin: 1.8rem 0;
+
+}
+.heading p{
+    color:var(--p)
+}
+
+main .projectcontainer{
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+    
+}
+main .projectcontainer .projectsBx{
+    flex-basis: 30%;
+    padding: 1rem 0;
+}
+.imgBx{
+    position: relative;
+    cursor: pointer;
+}
+.imgBx >img{
+    width: 100%;
+}
+.imgBx .hover{
+    width: 100%;
+    height: 50px;
+    background-color: #3b3b3b;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.imgBx:hover .hover{
+    opacity: 1;
+}
+.imgBx .hover .date{
+    color: white;
+}
+.imgBx .hover .des{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.imgBx .hover .des .desBx{
+    padding: 0 5px;
+}
+.imgBx .hover .des .desBx span{
+    color:white;
+}
+.temt{
+    padding: 0.8rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.pjbtn{
+    position:absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 2.8rem auto;
+    padding: 0.8rem 2.8rem;
+    color: white;
+    background-color: var(--virtual);
+}
+.pjbtn span{
+    position: relative;
+    font-size: 1.2rem;
+    padding-left: 1rem;
+    /* top:50%;
+    transform: translateY(-50%); */
+}
