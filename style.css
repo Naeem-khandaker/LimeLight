@@ -63,6 +63,9 @@ header{
 .brand a p span{
     color:var(--virtual)
 }
+.menuicon{
+    display: none;
+}
 nav ul{
     display: flex;
     justify-content: space-around;
@@ -157,8 +160,9 @@ main .projectcontainer .projectsBx{
     position: relative;
     cursor: pointer;
 }
-.imgBx >img{
+.imgBx > img{
     width: 100%;
+    height: 100%;
 }
 .imgBx .hover{
     width: 100%;
@@ -209,11 +213,7 @@ main .projectcontainer .projectsBx{
     color: white;
     background-color: var(--virtual);
 }
-.pjbtn span{
-    position: relative;
-    font-size: 1.2rem;
-    padding-left: 1rem;
-}
+
 
 /* article */
 
@@ -221,31 +221,35 @@ main .projectcontainer .projectsBx{
     width: 100%;
     padding: 2rem 0;
     background-color: var(--bghead);
-
-}
-.textBg > div{
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+
+}
+
+.textp{
+    position: relative;
+    width: 70%;
 }
 .text{
-    width: 70%;
+    width: 100%;
     padding: 3.5rem 0;
     font-size: 2rem;
     text-align: center;
     color: var(--p);
 
 }
-.text::after{
+.textp::after{
     content: url(./img/quote2.png);
-    right: 0;
+    position: absolute;
+    left: 102%;
     top: 50%;
     transform: translateY(-50%);
 }
-.text::before{
+.textp::before{
     content: url(./img/quote1.png);
-    left: 0;
+    position: absolute;
+    right: 102%;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -261,6 +265,8 @@ main .projectcontainer .projectsBx{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
+    height: 100%;
 }
 .containerBg .container .img{
     padding-right: 1.5rem;
@@ -380,4 +386,223 @@ footer{
 
 .footer ul li{
     padding: 0 1.5rem;
+}
+
+/* Responsive design start */
+
+@media only screen and (max-width:1024px){
+    /* Main Container */
+    main .projectcontainer .projectsBx{
+        flex-basis: 300px;
+    }
+
+    main .projectcontainer {
+        justify-content: space-around;
+    }
+
+    .imgBx .hover{
+        height: 40px;
+    }
+
+    .imgBx .hover .date p{
+        font-size: 0.8rem;
+    }
+
+    .imgBx .hover .des .desBx span{
+        font-size: 0.6rem;
+    }
+
+    .tmdes h3{
+        font-size: 1rem;
+    }
+
+    .tmdes p{
+        font-size: 0.8rem;
+    }
+    /* Article */
+    .artdes .head h1{
+        font-size: 1.3rem;
+    }
+
+    .artdes .head .timeline{
+        font-size: 0.8rem;
+    }
+
+    .artdes .middle p{
+        font-size: 0.9rem;
+    }
+
+    .artdes .foot a{
+        font-size: 0.8rem;
+    }
+
+    /* Footer */
+    .shop .imgdes p{
+        padding-bottom: 1rem;
+    }
+
+    .shop .imgdes a{
+       font-size: 0.8rem;
+    }
+
+}
+
+
+/* Tablet Layout */
+
+@media only screen and (max-width:768px){
+    /* Main Container */
+  .imgBx .hover{
+        opacity: 1;
+    }
+    main .projectcontainer {
+        justify-content: space-between;
+    }
+
+    /* Article */
+
+    .textp .text{
+        font-size: 1.5rem;
+    }
+
+    .artdes .head h1{
+        font-size: 1.1rem;
+    }
+
+    .artdes .head .timeline{
+        font-size: 0.6rem;
+    }
+
+    .artdes .middle p{
+        font-size: 0.8rem;
+    }
+
+    .artdes .foot a{
+        font-size: 0.7rem;
+    }
+
+    /* Footer */
+    .shop .imgdes p{
+        padding-bottom: 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .shop .imgdes a{
+       font-size: 0.6rem;
+       padding: 0.4rem 0.9rem;
+    }
+    .tweets{
+        font-size: 0.8rem;
+    }
+    .footer ul li a{
+        font-size: 0.8rem;
+    }
+
+}
+
+
+@media only screen and (max-width:660px){
+    .brand nav{
+        display: none;
+    } 
+    .menuicon{
+        display: inline-block;
+    }
+}
+/* Mobile layout */
+
+@media only screen and (max-width:425px){
+  .brand nav{
+      display: none;
+  }  
+  .banner .btn{
+      display: inline-block;
+      margin: 1rem 0;
+      padding: 1vh 1rem;
+  }
+
+    main .projectcontainer{
+      justify-content: center;
+  }
+
+  .pjbtn{
+      padding: 0.8rem 1rem;
+      border-radius: 0.5rem;
+  }
+  .containerBg .container{
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+  }
+  .containerBg .container .img{
+      margin-bottom: 1rem;
+  }
+  .artdes .head h1{
+      font-size: 0.95rem;
+  }
+  .artdes .head .timeline{
+      padding: 0.2rem;
+  }
+  .artdes .middle p{
+      font-size: 0.7rem;
+  }
+  .artdes .foot{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .ftop{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  .shop{
+      width: 100%;
+      margin-bottom: 1rem;
+  }
+  .fhead{
+      text-align: center;
+  }
+  .tweetsbg{
+      width: 100%;
+  }
+  .footer{
+      flex-direction: column;
+  }
+  .footer .social{
+      margin-top: 0.8rem;
+      width: 80%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+  }
+
+}
+  /* small mobole layout */
+  @media only screen and (max-width:320px){
+    .container{
+        width: 90%;
+    }
+    .banner h1{
+        font-size: 1.5rem;
+    }
+    .banner p{
+        font-size: 0.8rem;
+    }
+    .pjbtn{
+        font-size: 0.8rem;
+    }
+    .textp .text{
+        font-size: 0.8rem;
+    }
+
+    .textp::before{
+        right: 100%;
+    }
+    .textp::after{
+        left: 100%;
+    }
+    .footer ul li {
+        padding: 0 1rem;
+    }
 }
